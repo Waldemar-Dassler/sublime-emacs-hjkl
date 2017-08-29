@@ -66,14 +66,24 @@
     // Motion commands: forward/backward word, identifiers (sexpression), beginning/end of file/window
     //
     {"keys": ["alt+e"], "command": "sbp_move_word", "args": {"direction": 1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
+    {"keys": ["alt+´"], "command": "sbp_move_word", "args": {"direction": 1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
     {"keys": ["ctrl+alt+e"], "command": "sbp_move_sexpr", "args": {"direction": 1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
+    {"keys": ["ctrl+alt+"], "command": "sbp_move_sexpr", "args": {"direction": 1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
     {"keys": ["alt+b"], "command": "sbp_move_word", "args": {"direction": -1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
+    {"keys": ["alt+∫"], "command": "sbp_move_word", "args": {"direction": -1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
     {"keys": ["ctrl+alt+b"], "command": "sbp_move_sexpr", "args": {"direction": -1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
 
     {"keys": ["alt+["], "command": "sbp_move_to_paragraph", "args": {"direction": -1},
         "context": [ {"key": "sbp_use_alt_bindings"}]
     },
     {"keys": ["alt+]"], "command": "sbp_move_to_paragraph", "args": {"direction": 1},
+        "context": [ {"key": "sbp_use_alt_bindings"}]
+    },
+
+    {"keys": ["alt+“"], "command": "sbp_move_to_paragraph", "args": {"direction": -1},
+        "context": [ {"key": "sbp_use_alt_bindings"}]
+    },
+    {"keys": ["alt+‘"], "command": "sbp_move_to_paragraph", "args": {"direction": 1},
         "context": [ {"key": "sbp_use_alt_bindings"}]
     },
 
@@ -85,6 +95,10 @@
     // commands that move and set the mark first
     {"keys": ["alt+shift+."], "command": "sbp_move_to", "args": {"to": "eof"}, "context": [ {"key": "sbp_use_alt_bindings"}]},
     {"keys": ["alt+shift+,"], "command": "sbp_move_to", "args": {"to": "bof"}, "context": [ {"key": "sbp_use_alt_bindings"}]},
+
+    {"keys": ["alt+shift+≥"], "command": "sbp_move_to", "args": {"to": "eof"}, "context": [ {"key": "sbp_use_alt_bindings"}]},
+    {"keys": ["alt+shift+≤"], "command": "sbp_move_to", "args": {"to": "bof"}, "context": [ {"key": "sbp_use_alt_bindings"}]},
+
     {"keys": ["home"], "command": "sbp_move_to", "args": {"to": "bof"}},
     {"keys": ["end"], "command": "sbp_move_to", "args": {"to": "eof"}},
 
@@ -105,14 +119,21 @@
 
 
     {"keys": ["alt+d"], "command": "sbp_move_then_delete", "args": {"move_cmd": "sbp_move_word", "direction": 1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
+
+    {"keys": ["alt+∂"], "command": "sbp_move_then_delete", "args": {"move_cmd": "sbp_move_word", "direction": 1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
+
     {"keys": ["alt+backspace"], "command": "sbp_move_then_delete", "args": {"move_cmd": "sbp_move_word", "direction": -1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
 
     {"keys": ["ctrl+alt+k"], "command": "sbp_move_then_delete", "args": {"move_cmd": "sbp_move_sexpr", "direction": 1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
 
+    {"keys": ["ctrl+alt+˚"], "command": "sbp_move_then_delete", "args": {"move_cmd": "sbp_move_sexpr", "direction": 1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
 
 
     {"keys": ["alt+shift+["], "command": "sbp_shift_region", "args": {"direction": -1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
     {"keys": ["alt+shift+]"], "command": "sbp_shift_region", "args": {"direction": 1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
+
+    {"keys": ["alt+shift+“"], "command": "sbp_shift_region", "args": {"direction": -1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
+    {"keys": ["alt+shift+‘"], "command": "sbp_shift_region", "args": {"direction": 1}, "context": [ {"key": "sbp_use_alt_bindings"}]},
 
 
     //////////////////////////////
@@ -127,6 +148,9 @@
         "context": [ {"key": "i_search_active"}, {"key": "panel_has_focus"} ]
     },
     {"keys": ["alt+d"], "command": "sbp_inc_search", "args": {"cmd": "next", "keep": true},
+        "context": [ {"key": "i_search_active"}, {"key": "panel_has_focus"}, {"key": "sbp_use_alt_bindings"}]
+    },
+    {"keys": ["alt+∂"], "command": "sbp_inc_search", "args": {"cmd": "next", "keep": true},
         "context": [ {"key": "i_search_active"}, {"key": "panel_has_focus"}, {"key": "sbp_use_alt_bindings"}]
     },
     {"keys": ["ctrl+s"], "command": "sbp_inc_search", "args": {"cmd": "next", "keep": false, "forward": true},
