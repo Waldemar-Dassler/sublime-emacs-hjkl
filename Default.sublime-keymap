@@ -295,7 +295,6 @@
     {"keys": ["ctrl+shift+\\"], "command": "redo"},
     {"keys": ["ctrl+shift+/"], "command": "redo"},
 
-    {"keys": ["alt+h"], "command": "auto_complete", "context": [ {"key": "sbp_use_alt_bindings"}]},
     {"keys": ["ctrl+x", "ctrl+s"], "command": "save"},
     {"keys": ["ctrl+x", "ctrl+m"], "command": "save_all"},
     {"keys": ["ctrl+x", "s"], "command": "save_all"},
@@ -308,7 +307,6 @@
     {"keys": ["ctrl+x", ")"], "command": "toggle_record_macro" },
     {"keys": ["ctrl+x", "e"], "command": "run_macro" },
 
-    {"keys": ["alt+j"], "command": "wrap_lines", "args": {"width": 100}, "context": [ {"key": "sbp_use_alt_bindings"}]},
 
     {"keys": ["ctrl+c", ">"], "command": "indent" },
     {"keys": ["ctrl+c", "<"], "command": "unindent" },
