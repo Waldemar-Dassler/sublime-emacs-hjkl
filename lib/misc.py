@@ -92,7 +92,7 @@ class SettingsHelper:
 
     def get(self, key, default = None):
         if self.global_settings is None:
-            self.global_settings = sublime.load_settings('sublemacspro.sublime-settings')
+            self.global_settings = sublime.load_settings('emacs-hjkl.sublime-settings')
 
         settings = sublime.active_window().active_view().settings()
         value = settings.get(key, None)

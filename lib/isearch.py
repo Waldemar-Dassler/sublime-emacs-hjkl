@@ -16,7 +16,7 @@ REGION_SELECTED = "rs"
 
 # preserved isearch settings
 isearch_history_settings = None
-ISEARCH_SETTINGS_FILE = "sublemacspro_isearch_history.sublime-settings"
+ISEARCH_SETTINGS_FILE = "emacs-hjkl_isearch_history.sublime-settings"
 
 # ring buffer of saved searches - actual values loaded from settings
 isearch_history_size = 64
