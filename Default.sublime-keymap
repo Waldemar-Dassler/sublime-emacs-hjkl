@@ -320,4 +320,15 @@
     {"keys": ["ctrl+x", "r", "j"], "command": "sbp_point_from_register" },
     {"keys": ["ctrl+x", "r", "p"], "command": "sbp_choose_and_yank_point"},
 
+    // SIDEBAR
+    { "keys": ["f1"], "command": "focus_side_bar" },
+    { "keys": ["h"], "command": "move", "args": {"by": "characters", "forward": false}, "context":
+    [ {"key": "control", "operand": "sidebar_tree"} ] },
+    { "keys": ["j"], "command": "move", "args": {"by": "lines", "forward": true}, "context":
+        [ {"key": "control", "operand": "sidebar_tree"} ] },
+    { "keys": ["k"], "command": "move", "args": {"by": "lines", "forward": false}, "context":
+        [ {"key": "control", "operand": "sidebar_tree"} ] },
+    { "keys": ["l"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
+        [ {"key": "control", "operand": "sidebar_tree"} ] },
+
 ]

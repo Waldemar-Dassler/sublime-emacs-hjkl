@@ -1,3 +1,9 @@
+### Installing
+
+1. Install PackageControl
+2. Press ctrl+shift+p and sublime-emacs-hjkl
+3. DONE!
+
 ### Navigation
 
     'alt+h': 'backward-char'
@@ -12,26 +18,10 @@
     'alt+]': 'forward-paragraph'
     'ctrl+l': 'center-view'
     'ctrl+g' 'go-to-line'
-    '': 'back-to-indentation'
-    '': 'move-to-beginning-of-line'
     'alt+shift+[': 'shift-line-left'
     'alt+shift+]': 'shift-line-right'
     'alt+shift+,': 'move-to-top'
     'alt+shift+.': 'move-to-bottom'
-
-### Panes
-
-    '': 'pane:split-right'
-    '': 'pane:split-down'
-    '': 'pane:close'
-    '': 'close-other-panes'
-    '': 'window:focus-next-pane'
-    '': 'window:focus-previous-pane'
-
-#### Scrolling
-    '': 'recenter-top-bottom'
-    '': 'scroll-up'
-    '': 'scroll-down'
 
 
 ### Killing & Yanking
@@ -42,25 +32,10 @@
     'ctrl+k': 'kill-line-to-end'
 
 
-### Editing
+### Sidebar
 
-    '': 'delete-horizontal-space'
-    '': 'delete-indentation'
-    '': 'open-line'
-    '': 'just-one-space'
-    '': 'transpose-chars'
-    '': 'transpose-words'
-    '': 'transpose-sexps'
-    '': 'transpose-lines'
-    '': 'downcase-word-or-region'
-    '': 'downcase-word-or-region'
-    '': 'upcase-word-or-region'
-    '': 'upcase-word-or-region'
-    '': 'capitalize-word-or-region'
-    '': 'editor:newline-below'
-    '': 'core:undo'
-    '': 'core:undo'
-    '': 'autocomplete-plus:activate'
-    '': 'autoflow:reflow-selection'
-    '': 'editor:toggle-line-comments'
-
+    'f1': 'sidebar-focus'
+    'h': 'move-left'
+    'j': 'move-down'
+    'k': 'move-up'
+    'l': 'move-right'
