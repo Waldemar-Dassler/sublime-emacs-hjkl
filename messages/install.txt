@@ -1,0 +1,15 @@
+Thank you for installing Emacs HJKL
+=============================================
+
+Emacs GHJKL is an Emacs-like integration into Sublime with vim hotkeys.
+
+To learn more about the features of Emacs HJKL, go to the Github page:
+
+    https://github.com/Waldemar-Dassler/sublime-emacs-hjkl
+
+and checkout the README file.
+
+If you find bugs or request features, do not hesitate to drop us a line or
+leave an issue request at Github.
+
+Thanks for using Emacs HJKL!

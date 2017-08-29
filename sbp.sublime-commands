@@ -1,0 +1,122 @@
+[
+    //
+    // Motion commands: forward/backward word, identifiers (sexpression), beginning/end of file/window,
+    //
+    {"caption": "Emacs HJKL - Forward Word", "command": "sbp_move_word", "args": {"direction": 1}},
+    {"caption": "Emacs HJKL - Forward S-expression", "command": "sbp_move_sexpr", "args": {"direction": 1}},
+    {"caption": "Emacs HJKL - Backward Word", "command": "sbp_move_word", "args": {"direction": -1}},
+    {"caption": "Emacs HJKL - Backward S-expression", "command": "sbp_move_sexpr", "args": {"direction": -1}},
+    {"caption": "Emacs HJKL - Capitalize Word", "command": "sbp_change_case", "args": {"use_region": true, "mode": "title"}},
+    {"caption": "Emacs HJKL - Uppercase Word", "command": "sbp_change_case", "args": {"use_region": true, "mode": "upper"}},
+    {"caption": "Emacs HJKL - Lowercase Word", "command": "sbp_change_case", "args": {"use_region": true, "mode": "lower"}},
+    {"caption": "Emacs HJKL - Underscore Region", "command": "sbp_change_case", "args": {"use_region": true, "mode": "underscore"}},
+    {"caption": "Emacs HJKL - Camel Case Region", "command": "sbp_change_case", "args": {"use_region": true, "mode": "camel"}},
+
+
+    {"caption": "Emacs HJKL - Go to Beginning of File", "command": "sbp_move_to", "args": {"to": "bof"}},
+    {"caption": "Emacs HJKL - Go to End of File", "command": "sbp_move_to", "args": {"to": "eof"}},
+    {"caption": "Emacs HJKL - Go to Beginning of Pane", "command": "sbp_move_to", "args": {"to": "bow"}},
+    {"caption": "Emacs HJKL - Go to End of Pane", "command": "sbp_move_to", "args": {"to": "eow"}},
+    {"caption": "Emacs HJKL - Go to Line", "command": "sbp_goto_line"},
+
+    {"caption": "Emacs HJKL - Move Paragraph Backward", "command": "sbp_move_to_paragraph", "args": {"direction": -1}},
+    {"caption": "Emacs HJKL - Move Paragraph Forward", "command": "sbp_move_to_paragraph", "args": {"direction": 1}},
+
+    {"caption": "Emacs HJKL - Open line", "command": "sbp_open_line"},
+    {"caption": "Emacs HJKL - Center View Around Point", "command": "sbp_center_view"},
+
+    //
+    // Mark and point, kill region, kill line, yank and yank pop, deletion commands.
+    //
+    {"caption": "Emacs HJKL - Set Emacs-Style Mark", "command": "sbp_set_mark"},
+    {"caption": "Emacs HJKL - Swap Point and Mark", "command": "sbp_swap_point_and_mark"},
+    {"caption": "Emacs HJKL - Toggle Mark Highlighting", "command": "sbp_swap_point_and_mark", "args": {"toggle_active_mark_mode": true}},
+    {"caption": "Emacs HJKL - Kill to End of Line", "command": "sbp_kill_line"},
+    {"caption": "Emacs HJKL - Kill Region", "command": "sbp_kill_region"},
+    {"caption": "Emacs HJKL - Copy Region", "command": "sbp_kill_region", "args": {"is_copy": true}},
+    {"caption": "Emacs HJKL - Yank", "command": "sbp_yank"},
+    {"caption": "Emacs HJKL - Yank All Cursors", "command": "sbp_yank_all_cursors"},
+    {"caption": "Emacs HJKL - Yank Pop", "command": "sbp_yank", "args": {"pop": 1}},
+    {"caption": "Emacs HJKL - Yank Pop Backwards", "command": "sbp_yank", "args": {"pop": -1}},
+
+    {"caption": "Emacs HJKL - Kill Word Forward", "command": "sbp_move_then_delete", "args": {"move_cmd": "sbp_move_word", "direction": 1}},
+    {"caption": "Emacs HJKL - Kill Word Backward", "command": "sbp_move_then_delete", "args": {"move_cmd": "sbp_move_word", "direction": -1}},
+    {"caption": "Emacs HJKL - Kill S-expression", "command": "sbp_move_then_delete", "args": {"move_cmd": "sbp_move_sexpr", "direction": 1}},
+    {"caption": "Emacs HJKL - Kill S-expression Backward", "command": "sbp_move_then_delete", "args": {"move_cmd": "sbp_move_sexpr", "direction": -1}},
+
+    {"caption": "Emacs HJKL - Delete White Space", "command": "sbp_delete_white_space"},
+    {"caption": "Emacs HJKL - Delete Blank Lines", "command": "sbp_delete_blank_lines"},
+
+    {"caption": "Emacs HJKL - I-Search Forward", "command": "sbp_inc_search_from_menu", "args": {"forward": true, "regex": false}},
+    {"caption": "Emacs HJKL - I-Search Backward", "command": "sbp_inc_search_from_menu", "args": {"forward": false, "regex": false}},
+    {"caption": "Emacs HJKL - I-Search Append From Cursor", "command": "sbp_inc_search", "args": {"cmd": "append_from_cursor"}},
+    {"caption": "Emacs HJKL - I-Search Keep and Next", "command": "sbp_inc_search", "args": {"cmd": "next", "keep": true}},
+    {"caption": "Emacs HJKL - I-Search Skip and Next", "command": "sbp_inc_search", "args": {"cmd": "next", "keep": false, "forward": true}},
+    {"caption": "Emacs HJKL - I-Search Pop", "command": "sbp_inc_search", "args": {"cmd": "pop"}},
+
+    // emacs-style numeric argument handling
+    {"caption": "Emacs HJKL - Emacs style universal argument", "command": "sbp_universal_argument", "args": {"value": "by_four"}},
+    {"caption": "Emacs HJKL - Supply Digit Argument", "command": "sbp_universal_argument", "args": {"value": "negative"}},
+    {"caption": "Emacs HJKL - Supply Digit Argument 1", "command": "sbp_universal_argument", "args": {"value": 1}},
+    {"caption": "Emacs HJKL - Supply Digit Argument 2", "command": "sbp_universal_argument", "args": {"value": 2}},
+    {"caption": "Emacs HJKL - Supply Digit Argument 3", "command": "sbp_universal_argument", "args": {"value": 3}},
+    {"caption": "Emacs HJKL - Supply Digit Argument 4", "command": "sbp_universal_argument", "args": {"value": 4}},
+    {"caption": "Emacs HJKL - Supply Digit Argument 5", "command": "sbp_universal_argument", "args": {"value": 5}},
+    {"caption": "Emacs HJKL - Supply Digit Argument 6", "command": "sbp_universal_argument", "args": {"value": 6}},
+    {"caption": "Emacs HJKL - Supply Digit Argument 7", "command": "sbp_universal_argument", "args": {"value": 7}},
+    {"caption": "Emacs HJKL - Supply Digit Argument 8", "command": "sbp_universal_argument", "args": {"value": 8}},
+    {"caption": "Emacs HJKL - Supply Digit Argument 9", "command": "sbp_universal_argument", "args": {"value": 9}},
+    {"caption": "Emacs HJKL - Supply Digit Argument 0", "command": "sbp_universal_argument", "args": {"value": 0}},
+
+    {"caption": "Emacs HJKL - Split Window Horizontal", "command": "sbp_pane_cmd", "args": {"cmd": "split", "stype": "h"}},
+    {"caption": "Emacs HJKL - Split Window Vertical", "command": "sbp_pane_cmd", "args": {"cmd": "split", "stype": "v"}},
+    {"caption": "Emacs HJKL - Grow Window Vertical", "command": "sbp_pane_cmd", "args": {"cmd": "grow", "direction": "g"}},
+    {"caption": "Emacs HJKL - Shrink Window Vertical", "command": "sbp_pane_cmd", "args": {"cmd": "grow", "direction": "s"}},
+    {"caption": "Emacs HJKL - Grow Window Horizontal", "command": "sbp_pane_cmd", "args": {"cmd": "grow", "direction": "gh"}},
+    {"caption": "Emacs HJKL - Shrink Window Horizontal", "command": "sbp_pane_cmd", "args": {"cmd": "grow", "direction": "sh"}},
+    {"caption": "Emacs HJKL - Destroy Window", "command": "sbp_pane_cmd", "args": {"cmd": "destroy", "pane": "self"}},
+    {"caption": "Emacs HJKL - Destroy Other Windows", "command": "sbp_pane_cmd", "args": {"cmd": "destroy", "pane": "others"}},
+    {"caption": "Emacs HJKL - Close Current View", "command": "sbp_close_current_view"},
+    {"caption": "Emacs HJKL - Destroy Stale Views", "command": "sbp_close_stale_views", "args": {"n_windows": 5}},
+    {"caption": "Emacs HJKL - Toggle View Pinned State", "command": "sbp_toggle_view_pinned"},
+    {"caption": "Emacs HJKL - Go to Next Window", "command": "sbp_pane_cmd", "args": {"cmd": "move", "direction": "next"}},
+    {"caption": "Emacs HJKL - Go to Previous Window", "command": "sbp_pane_cmd", "args": {"cmd": "move", "direction": "prev"}},
+    {"caption": "Emacs HJKL - Previous Tab", "command": "sbp_pane_cmd", "args": {"cmd": "move", "direction": "left"}},
+    {"caption": "Emacs HJKL - Next Tab", "command": "sbp_pane_cmd", "args": {"cmd": "move", "direction": "right"}},
+
+    {"caption": "Emacs HJKL - Quit All Open Panels, Overlays and Selections", "command": "sbp_quit"},
+
+    // Jump and Zapping commands
+    {"caption": "Emacs HJKL - Jump To Char", "command": "sbp_jump_to_char", "args": {"include_char": true}},
+    {"caption": "Emacs HJKL - Jump Up To Char", "command": "sbp_jump_to_char", "args": {"include_char": false}},
+    {"caption": "Emacs HJKL - Jump To String", "command": "sbp_jump_to_string", "args": {"include_string": true}},
+    {"caption": "Emacs HJKL - Jump Up To String", "command": "sbp_jump_to_string", "args": {"include_string": false}},
+    {"caption": "Emacs HJKL - Zap To Char", "command": "sbp_zap_to_char", "args": {"include_char": true}},
+    {"caption": "Emacs HJKL - Zap Up To Char", "command": "sbp_zap_to_char", "args": {"include_char": false}},
+    {"caption": "Emacs HJKL - Zap To String", "command": "sbp_zap_to_string", "args": {"include_string": true}},
+    {"caption": "Emacs HJKL - Zap Up To String", "command": "sbp_zap_to_string", "args": {"include_string": false}},
+
+    // Rectangle and Register commands
+    {"caption": "Emacs HJKL - Insert Rectangle", "command": "sbp_rectangle_insert"},
+    {"caption": "Emacs HJKL - Delete Rectangle", "command": "sbp_rectangle_delete"},
+    {"caption": "Emacs HJKL - Store Text Register", "command": "sbp_register_store"},
+    {"caption": "Emacs HJKL - Insert From Register", "command": "sbp_register_insert"},
+    {"caption": "Emacs HJKL - Store Point Register", "command": "sbp_point_to_register"},
+    {"caption": "Emacs HJKL - Jump To Point Register", "command": "sbp_point_from_register"},
+
+    // Shift region commands
+    {"caption": "Emacs HJKL - Shift Region Backward (Left)", "command": "sbp_shift_region", "args": {"direction": -1}},
+    {"caption": "Emacs HJKL - Shift Region Forward (Right)", "command": "sbp_shift_region", "args": {"direction": 1}},
+
+    // Switch to view command
+    {"caption": "Emacs HJKL - Switch To View", "command": "sbp_switch_to_view"},
+
+    // Choose and Yank Kill Ring / Choose Text and Point Registers
+    {"caption": "Emacs HJKL - Choose and Yank", "command": "sbp_choose_and_yank"},
+    {"caption": "Emacs HJKL - Choose and Yank All Cursors", "command": "sbp_choose_and_yank",
+        "args": {"all_cursors": true}
+    },
+    {"caption": "Emacs HJKL - Choose and Insert Text Register", "command": "sbp_choose_and_yank_register"},
+    {"caption": "Emacs HJKL - Choose and Jump To Point Register", "command": "sbp_choose_and_yank_point"},
+
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "preferences",
+    "children":
+    [
+      {
+        "caption": "Package Settings",
+        "mnemomic": "P",
+        "id": "package-settings",
+        "children":
+        [
+          {
+            "caption": "Emacs HJKL",
+            "children":
+            [
+              {
+                "command": "open_file", "args":
+                {
+                  "file": "${packages}/emacs-hjkl/emacs-hjkl.sublime-settings"
+                },
+                "caption": "Settings - Default"
+              },
+              {
+                "command": "open_file", "args":
+                {
+                  "file": "${packages}/User/emacs-hjkl.sublime-settings"
+                },
+                "caption": "Settings - User"
+              },
+              { "caption": "-" },
+              {
+                "command": "open_file", "args":
+                {
+                  "file": "${packages}/emacs-hjkl/Default.sublime-keymap",
+                },
+                "caption": "Key Bindings - Default"
+              },
+              {
+                "command": "open_file", "args":
+                {
+                  "file": "${packages}/User/Default (OSX).sublime-keymap",
+                  "platform": "OSX"
+                },
+                "caption": "Key Bindings - User"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

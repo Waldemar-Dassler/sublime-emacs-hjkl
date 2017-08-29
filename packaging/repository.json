@@ -1,0 +1,17 @@
+[
+	{
+		"name": "Emacs HJKL",
+		"previous_names": ["emacs-hjkl"],
+		"details": "https://github.com/Waldemar-Dassler/sublime-emacs-hjkl",
+		"releases": [
+			{
+				"sublime_text": "<3000",
+				"branch": "st2"
+			},
+			{
+				"sublime_text": ">=3000",
+				"tags": true
+			}
+		]
+	},
+]
